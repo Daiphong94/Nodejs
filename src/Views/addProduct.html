@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+</head>
+<body>
+    <h1>Add Product</h1>
+    <form action="/addProduct" method="POST">
+        <label for="ProductCode">Product Code:</label>
+        <input type="text" id="ProductCode" name="ProductCode" required><br>
+        
+        <label for="ProductName">Product Name:</label>
+        <input type="text" id="ProductName" name="ProductName" required><br>
+        
+        <label for="ProductDate">Product Date:</label>
+        <input type="date" id="ProductDate" name="ProductDate" required><br>
+        
+        <label for="ProductOriginPrice">Product Origin Price:</label>
+        <input type="number" id="ProductOriginPrice" name="ProductOriginPrice" required><br>
+        
+        <label for="Quantity">Quantity:</label>
+        <input type="number" id="Quantity" name="Quantity" required><br>
+        
+        <label for="ProductStoreCode">Product Store Code:</label>
+        <input type="text" id="ProductStoreCode" name="ProductStoreCode" required><br>
+        
+        <button type="submit">Add Product</button>
+    </form>
+</body>
+</html>

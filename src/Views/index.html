@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Product List</h1>
+    <ul>
+        <% products.forEach(product => { %>
+            <li>
+                <strong>Product Code:</strong> <%= product.ProductCode %><br>
+                <strong>Product Name:</strong> <%= product.ProductName %><br>
+                <strong>Product Date:</strong> <%= product.ProductDate %><br>
+                <strong>Product Origin Price:</strong> <%= product.ProductOriginPrice %><br>
+                <strong>Quantity:</strong> <%= product.Quantity %><br>
+                <strong>Product Store Code:</strong> <%= product.ProductStoreCode %><br>
+                <form action="/deleteProduct" method="POST">
+                    <input type="hidden" name="productId" value="<%= product._id %>">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        <% }); %>
+    </ul>
+    <a href="/addProduct.html">Add Product</a>
+    
+</body>
+</html>
